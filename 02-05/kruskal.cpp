@@ -39,9 +39,12 @@ void kruskal(vector<pair<int, pair< int, int> > > g, int n, int e){
 			tree.push_back(g[i]);
 		}
 	}
+	int sum=0;
 	for(int i=0;i<tree.size();i++){
-		cout<<tree[i].first<<" "<<tree[i].second.first<<" "<<tree[i].second.second<<endl;
+		cout<<tree[i].second.first<<"-"<<tree[i].second.second<<" Weight "<<tree[i].first<<endl;
+		sum+=tree[i].first;
 	}
+	cout<<"Sum of MST = "<<sum<<endl;
 }
 
 int main(){
@@ -58,3 +61,19 @@ int main(){
 	kruskal(t,n,e);
 	
 }
+
+// 9 14
+// 1 7 6
+// 2 8 2
+// 2 6 5
+// 4 0 1
+// 4 2 5
+// 6 8 6
+// 7 2 3
+// 7 7 8
+// 8 0 7
+// 8 1 2
+// 9 3 4
+// 10 5 4
+// 11 1 7
+// 14 3 5
